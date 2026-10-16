@@ -1,0 +1,151 @@
+{
+  "inicio": {
+    "texto": "¡Hola! Bienvenido al Chat de IA. Soy tu asistente personal con doble especialidad: Fútbol y Estudio. Para empezar formalmente, ¿podrías decirme tu nombre?",
+    "requiereInput": true,
+    "tipoValidacion": "texto",
+    "placeholder": "Ingresá tu nombre...",
+    "siguiente": "menu_principal"
+  },
+  "menu_principal": {
+    "texto": "¡Perfecto! ¿En qué tema nos enfocamos hoy? Elegí una opción:",
+    "opciones": [
+      {
+        "texto": "⚽ Fútbol (Predicciones, alineaciones, juegos)",
+        "siguiente": "menu_futbol"
+      },
+      {
+        "texto": "📚 Estudio (Resúmenes, explicaciones, temas varios)",
+        "siguiente": "menu_estudio"
+      },
+      {
+        "texto": "❌ Terminar conversación",
+        "siguiente": "fin"
+      }
+    ]
+  },
+  "menu_futbol": {
+    "texto": "Excelente. Entramos a la cancha. ¿Qué equipo de fútbol te gusta o sobre qué área querés información?",
+    "opciones": [
+      {
+        "texto": "🔮 Predicciones y Análisis de Partidos",
+        "siguiente": "futbol_predicciones"
+      },
+      {
+        "texto": "📋 Alineaciones y Tácticas",
+        "siguiente": "futbol_alineaciones"
+      },
+      {
+        "texto": "🎮 Crear/Proponer un Juego de Fútbol",
+        "siguiente": "futbol_juego"
+      },
+      {
+        "texto": "⬅️ Volver al menú principal",
+        "siguiente": "menu_principal"
+      }
+    ]
+  },
+  "futbol_predicciones": {
+    "texto": "Analizando métricas y rendimiento reciente: Para el próximo encuentro importante, la probabilidad de victoria local es del 65% basándonos en la posesión de balón y efectividad de pases. Ponte serio: en partidos decisivos la concentración táctica en los primeros 15 minutos será clave.",
+    "opciones": [
+      {
+        "texto": "🔄 Ver otras opciones de Fútbol",
+        "siguiente": "menu_futbol"
+      },
+      {
+        "texto": "🏠 Volver al menú principal",
+        "siguiente": "menu_principal"
+      }
+    ]
+  },
+  "futbol_alineaciones": {
+    "texto": "Formación recomendada: 4-3-3 de alta presión. Dos extremos rápidos para abrir el campo y un mediocampista de contención para mantener el equilibrio defensivo.",
+    "opciones": [
+      {
+        "texto": "🔄 Ver otras opciones de Fútbol",
+        "siguiente": "menu_futbol"
+      },
+      {
+        "texto": "🏠 Volver al menú principal",
+        "siguiente": "menu_principal"
+      }
+    ]
+  },
+  "futbol_juego": {
+    "texto": "¡Idea de juego creada! 'Penalty Master AI': Un juego donde tenés que adivinar la trayectoria del tiro del bot calculando el ángulo y la potencia. ¿Te gustaría simular una ronda?",
+    "opciones": [
+      {
+        "texto": "⚽ Sí, ¡arrancar juego!",
+        "siguiente": "juego_en_curso"
+      },
+      {
+        "texto": "🔄 Volver a Fútbol",
+        "siguiente": "menu_futbol"
+      }
+    ]
+  },
+  "juego_en_curso": {
+    "texto": "¡GOLAZO! El disparo fue al ángulo superior izquierdo a 95 km/h. La precisión técnica fue impecable.",
+    "opciones": [
+      {
+        "texto": "🔄 Volver a Fútbol",
+        "siguiente": "menu_futbol"
+      },
+      {
+        "texto": "🏠 Volver al menú principal",
+        "siguiente": "menu_principal"
+      }
+    ]
+  },
+  "menu_estudio": {
+    "texto": "Pasemos a la biblioteca. ¿Qué materia o tema querés estudiar hoy?",
+    "opciones": [
+      {
+        "texto": "📝 Hacer un Resumen FÁCIL",
+        "siguiente": "estudio_resumen"
+      },
+      {
+        "texto": "🧠 Explicación seria de un tema complejo",
+        "siguiente": "estudio_explicacion"
+      },
+      {
+        "texto": "⬅️ Volver al menú principal",
+        "siguiente": "menu_principal"
+      }
+    ]
+  },
+  "estudio_resumen": {
+    "texto": "Resumen Exprés: 1. Identificá la idea principal. 2. Separá las causas y consecuencias. 3. Agrupá los conceptos clave en un mapa conceptual. ¡Es la forma más rápida de memorizar sin complicarte!",
+    "opciones": [
+      {
+        "texto": "🔄 Ver otras opciones de Estudio",
+        "siguiente": "menu_estudio"
+      },
+      {
+        "texto": "🏠 Volver al menú principal",
+        "siguiente": "menu_principal"
+      }
+    ]
+  },
+  "estudio_explicacion": {
+    "texto": "Poniéndonos rigurosos: Para dominar cualquier materia técnica, es indispensable comprender la teoría base antes de la práctica. Analiza los axiomas primarios y realiza ejercicios de aplicación diaria.",
+    "opciones": [
+      {
+        "texto": "🔄 Ver otras opciones de Estudio",
+        "siguiente": "menu_estudio"
+      },
+      {
+        "texto": "🏠 Volver al menú principal",
+        "siguiente": "menu_principal"
+      }
+    ]
+  },
+  "fin": {
+    "texto": "Ha sido un gusto ayudarte en tu sesión de fútbol y estudio. La sesión ha finalizado. Si querés volver a interactuar, presioná el botón de abajo.",
+    "opciones": [
+      {
+        "texto": "🔄 Reiniciar conversación",
+        "siguiente": "inicio"
+      }
+    ]
+  }
+}
