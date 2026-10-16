@@ -1,0 +1,219 @@
+/* Variables y Estilo Rústico Temático */
+:root {
+    --madera-oscura: #3e2723;
+    --madera-clara: #8d6e63;
+    --pergamino: #f4ebd0;
+    --verde-pasto: #2e7d32;
+    --linea-cancha: #ffffff;
+    --texto-oscuro: #2b1d0c;
+    --borde-rustico: #5d4037;
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+    background-color: #1a1a1a;
+}
+
+/* Fondo Dividido: Biblioteca (Izquierda) y Cancha de Fútbol (Derecha) */
+.escenario-fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    z-index: 1;
+}
+
+.lado-estudio {
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(135deg, #2b1b17 0%, var(--madera-oscura) 100%);
+    position: relative;
+    border-right: 4px solid #1a0f0d;
+}
+
+.biblioteca-bg {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    height: 60%;
+    border-top: 10px solid var(--madera-clara);
+    border-bottom: 10px solid var(--madera-clara);
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+    background: repeating-linear-gradient(
+        90deg,
+        #4e342e 0px,
+        #4e342e 30px,
+        #3e2723 30px,
+        #3e2723 35px
+    );
+    opacity: 0.4;
+}
+
+.lado-futbol {
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(135deg, #1b5e20 0%, var(--verde-pasto) 100%);
+    position: relative;
+}
+
+.lineas-cancha {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    width: 60%;
+    height: 60%;
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+}
+
+/* Contenedor del Chat estilo Rústico */
+.chat-contenedor {
+    position: relative;
+    z-index: 10;
+    width: 90%;
+    max-width: 550px;
+    height: 85vh;
+    background: var(--pergamino);
+    border: 6px solid var(--borde-rustico);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-header {
+    background-color: var(--madera-oscura);
+    color: var(--pergamino);
+    padding: 15px;
+    text-align: center;
+    border-bottom: 3px solid var(--borde-rustico);
+}
+
+.chat-header h1 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.chat-header .subtitulo {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+/* Zonas de Mensajes */
+.zonas-de-mensajes {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: radial-gradient(circle, rgba(244,235,208,1) 60%, rgba(225,212,180,1) 100%);
+}
+
+.mensaje {
+    max-width: 80%;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.mensaje.bot {
+    align-self: flex-start;
+    background-color: #e2d4b7;
+    color: var(--texto-oscuro);
+    border: 1px solid var(--madera-clara);
+    border-top-left-radius: 2px;
+}
+
+.mensaje.usuario {
+    align-self: flex-end;
+    background-color: var(--madera-oscura);
+    color: var(--pergamino);
+    border-top-right-radius: 2px;
+}
+
+/* Ingresos de Opciones */
+.ingresos-de-opciones {
+    padding: 15px;
+    background-color: #e0d1b1;
+    border-top: 2px solid var(--borde-rustico);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.opcion-btn {
+    background-color: var(--madera-oscura);
+    color: var(--pergamino);
+    border: 2px solid var(--borde-rustico);
+    padding: 12px 15px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.opcion-btn:hover {
+    background-color: var(--madera-clara);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Formulario de Input en caso de requerir datos específicos */
+.input-contenedor {
+    display: flex;
+    gap: 8px;
+}
+
+.input-datos {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid var(--borde-rustico);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    background-color: #fdfbf7;
+}
+
+.error-msj {
+    color: #b71c1c;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Responsivo para celulares */
+@media (max-width: 600px) {
+    .chat-contenedor {
+        width: 95%;
+        height: 92vh;
+    }
+
+    .escenario-fondo {
+        flex-direction: column;
+    }
+
+    .lado-estudio, .lado-futbol {
+        width: 100%;
+        height: 50%;
+    }
+}
